@@ -47,7 +47,7 @@ $family-sans-serif: "Nunito", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $blue;
-$link: $pink;
+// $link: $pink;
 $success: $green;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
@@ -58,13 +58,18 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
+@import "./node_modules/bulma/bulma.sass";
+
 // Import only what you need from Bulma
-@import "./node_modules/bulma/sass/utilities/_all.sass";
-@import "./node_modules/bulma/sass/base/_all.sass";
-@import "./node_modules/bulma/sass/elements/button.sass";
-@import "./node_modules/bulma/sass/elements/container.sass";
-@import "./node_modules/bulma/sass/elements/title.sass";
-@import "./node_modules/bulma/sass/form/_all.sass";
-@import "./node_modules/bulma/sass/components/navbar.sass";
-@import "./node_modules/bulma/sass/layout/hero.sass";
-@import "./node_modules/bulma/sass/layout/section.sass";
+// @import "./node_modules/bulma/sass/utilities/_all.sass";
+// @import "./node_modules/bulma/sass/base/_all.sass";
+// @import "./node_modules/bulma/sass/elements/button.sass";
+// @import "./node_modules/bulma/sass/elements/container.sass";
+// @import "./node_modules/bulma/sass/elements/title.sass";
+// @import "./node_modules/bulma/sass/form/_all.sass";
+// @import "./node_modules/bulma/sass/components/navbar.sass";
+// @import "./node_modules/bulma/sass/layout/hero.sass";
+// @import "./node_modules/bulma/sass/layout/section.sass";
+
+// Font awesome
+@import "./node_modules/font-awesome/scss/font-awesome.scss";

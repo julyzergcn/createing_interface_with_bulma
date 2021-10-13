@@ -1,0 +1,17 @@
+{
+  "name": "creating_interface_with_bulma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass --omit-source-map-url my-bulma.scss dist/my-bulma.css",
+    "watch": "npm run build -- --watch",
+    "start": "npm run watch"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.9.3",
+    "node-sass": "^6.0.1"
+  }
+}

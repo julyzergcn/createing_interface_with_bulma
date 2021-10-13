@@ -23,3 +23,14 @@ yarn add font-awesome
 cp -r node_modules/font-awesome/fonts .
 ```
 
+### Install Django
+
+python3 -mvenv env
+echo 'source env/bin/activate' > load_env.sh
+. load_env.sh
+pip install django
+pip freeze -l > requirements.txt
+django-admin.py startproject django_project
+cd django_project
+python manage.py migrate
+python manage.py runserver

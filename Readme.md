@@ -12,7 +12,7 @@ yarn add bulma node-sass
 
 ```sh
   yarn
-  yarn build
+  yarn css-build
   yarn start
 ```
 
@@ -20,7 +20,16 @@ yarn add bulma node-sass
 
 ```sh
 yarn add font-awesome
-cp -r node_modules/font-awesome/fonts .
+cp -r node_modules/font-awesome/fonts dist/
+```
+
+### Install Google fonts
+
+https://www.npmjs.com/package/googlefonts-inliner
+
+```sh
+yarn add googlefonts-inliner postcss
+yarn add postcss-cli
 ```
 
 ### Install Django

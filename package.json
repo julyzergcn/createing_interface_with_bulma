@@ -4,15 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass --omit-source-map-url my-bulma.scss dist/my-bulma.css",
-    "watch": "npm run build -- --watch",
-    "start": "npm run watch"
+    "css-build": "node-sass --omit-source-map-url scss/my-bulma.scss dist/css/my-bulma.css && npm run css-postcss",
+    "css-postcss": "postcss dist/css/my-bulma.css -o dist/css/my-bulma.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "bulma": "^0.9.3",
     "font-awesome": "^4.7.0",
-    "node-sass": "^6.0.1"
+    "googlefonts-inliner": "^0.3.3",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1"
   }
 }

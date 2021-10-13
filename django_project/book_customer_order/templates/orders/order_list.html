@@ -1,0 +1,117 @@
+{% extends 'bulma/base_with_navbar_sidebar.html' %}
+{% load static %}
+
+{% block sidebar_column %}
+  {% include 'includes/sidebar_menu.html' with active_menu='orders' %}
+{% endblock %}
+
+{% block main_column %}
+  <h1 class="title">Orders</h1>
+
+  <nav class="level">
+    <div class="level-left">
+      <div class="level-item">
+        <p class="subtitle is-5">
+          <strong>10</strong>
+          orders
+        </p>
+      </div>
+      <p class="level-item">
+        <a href="{% url 'new_book' %}" class="button is-success">
+          New
+        </a>
+      </p>
+      <div class="level-item is-hidden-tablet-only">
+        <div class="field has-addons">
+          <p class="control">
+            <input type="text" class="input" placeholder="Order#, Customer...">
+          </p>
+          <p class="control">
+            <button class="button">Search</button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="level-right">
+      <div class="level-item"><strong>All</strong></div>
+      <div class="level-item">
+        <a href="#">With orders</a>
+      </div>
+      <div class="level-item">
+        <a href="#">Without orders</a>
+      </div>
+    </div>
+  </nav>
+
+  <table class="table is-hoverable is-fullwidth">
+    <thead>
+      <tr>
+        <th class="is-narrow">
+          <input type="checkbox">
+        </th>
+        <th>Order #</th>
+        <th>Customer</th>
+        <th>Date</th>
+        <th>Books</th>
+        <th>Status</th>
+        <th class="has-text-right">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in '1234567890'|make_list %}
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="#"><strong>787352</strong></a>
+          </td>
+          <td>
+            <a href="#">
+              <strong>John Miller</strong>
+            </a>
+          </td>
+          <td>
+            Nov 18, 17:38
+          </td>
+          <td>
+            <a href="#">2</a>
+          </td>
+          <td>
+            <span class="tag is-warning">In progress</span>
+          </td>
+          <td class="has-text-right">$56.98</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <nav class="pagination">
+    <a href="#" class="pagination-previous">Previous</a>
+    <a href="#" class="pagination-next">Next</a>
+    <ul class="pagination-list">
+      <li>
+        <a href="#" class="pagination-link">1</a>
+      </li>
+      <li>
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+      <li>
+        <a href="#" class="pagination-link">45</a>
+      </li>
+      <li>
+        <a href="#" class="pagination-link is-current">46</a>
+      </li>
+      <li>
+        <a href="#" class="pagination-link">47</a>
+      </li>
+      <li>
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+      <li>
+        <a href="#" class="pagination-link">86</a>
+      </li>
+    </ul>
+  </nav>
+{% endblock %}

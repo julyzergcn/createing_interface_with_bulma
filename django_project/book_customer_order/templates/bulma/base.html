@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+
+    {% block favicon %}
+      <link rel="shortcut icon" href="#">
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'css/my-bulma.css' %}">
+
+    {% block css %}{% endblock %}
+  </head>
+  <body>
+
+    {% block body %}
+      <section class="section">
+        <div class="container">
+          <h1 class="title">
+            Hello World
+          </h1>
+          <p class="subtitle">
+            My first website with <strong>Bulma</strong>!
+          </p>
+        </div>
+      </section>
+    {% endblock %}
+
+    {% block js %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<nav class="menu">
+  <p class="menu-label">
+    Menu
+  </p>
+  <ul class="menu-list">
+    <li>
+      <a href="{% url 'dashboard' %}"
+        {% ifequal active_menu 'dashboard' %}
+          class="is-active"
+        {% endifequal %}
+      >
+        <span class="icon">
+          <i class="fa fa-tachometer"></i>
+        </span>
+        Dashboard
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'book_list' %}"
+        {% ifequal active_menu 'books' %}
+          class="is-active"
+        {% endifequal %}
+      >
+        <span class="icon">
+          <i class="fa fa-book"></i>
+        </span>
+        Books
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'customer_list' %}"
+        {% ifequal active_menu 'customers' %}
+          class="is-active"
+        {% endifequal %}
+      >
+        <span class="icon">
+          <i class="fa fa-address-book"></i>
+        </span>
+        Customers
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'order_list' %}"
+        {% ifequal active_menu 'orders' %}
+          class="is-active"
+        {% endifequal %}
+      >
+        <span class="icon">
+          <i class="fa fa-file-text-o"></i>
+        </span>
+        Orders
+      </a>
+    </li>
+  </ul>
+</nav>

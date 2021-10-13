@@ -7,9 +7,6 @@
 
 // Or customize as below
 
-// Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-
 // Set your brand colors
 $purple: #8A4D76;
 $pink: #FA7C91;
@@ -49,8 +46,8 @@ $grey-light: $beige-light;
 $primary: $blue;
 // $link: $pink;
 $success: $green;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
 $body-background-color: $beige-lighter;
@@ -73,3 +70,6 @@ $input-shadow: none;
 
 // Font awesome
 @import "./node_modules/font-awesome/scss/font-awesome.scss";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');

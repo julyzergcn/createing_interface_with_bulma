@@ -5,7 +5,7 @@
 ```sh
 mkdir -p ~/src/createing_interface_with_bulma && cd $_
 npm init
-yarn add bulma node-sass
+yarn add bulma node-sass npm-run-all
 ```
 
 ### Or commands after download
